@@ -27,6 +27,8 @@ Evaluation
 
 The evaluation of the data was done using ROC curves and AUC as the parameter. Accuracy TPR and FPR were the other evalution metrics used.
 
+PS: Using the scrpits requires InfluxDB setup and then using scripts in the repository to pump data into the influxDB
+
 If you have any ideas or you need to understand any piece , please write to me on the below email address:
 rahulagarwal.iet@gmail.com
 
