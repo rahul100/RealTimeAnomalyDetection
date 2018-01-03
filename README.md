@@ -27,7 +27,8 @@ Evaluation
 
 The evaluation of the data was done using ROC curves and AUC as the parameter. Acuracy TPR and FPR were the other evalution metrics used.
 
-
+If you have any ideas or you need to understand any piece , please write to me on the below email address:
+rahulagarwal.iet@gmail.com
 
 
 
