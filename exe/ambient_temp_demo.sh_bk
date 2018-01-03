@@ -1,0 +1,24 @@
+echo "Running the Ambient temp anomaly detection demo"
+echo "Step 1: Pumping data into influxdb"
+/usr/bin/python2.7 ../src/python/pump_AmbientTemp2influx.py >> ../log/ambient_temp_pump.log 2>&1 &
+pump_pid=$!
+sleep 45
+#echo $pump_pid
+echo "Explose  anomaly detection"
+/usr/bin/python2.7 ../src/python/anomaly_EXPoSE.py >> ../log/anomaly_expose.log 2>&1 &
+expose_pid=$!
+echo "Elliptic Envelope anomaly detection"
+/usr/bin/python2.7 ../src/python/anomaly_elliptic_envlope.py >> ../log/anomaly_elliptic.log 2>&1 &
+elliptic_pid=$!
+echo "Skyline anomaly detection"
+/usr/bin/python2.7 ../src/python/anomaly_skyline.py >> ../log/anomaly_skyline.log 2>&1 &
+skyline_pid=$!
+while true; do
+    read -p "Do you wish to stop the demo?" yn
+    case $yn in
+        [Yy] ) kill -9 $pump_pid;kill -9 $expose_pid;kill -9 $elliptic_pid;kill -9 $skyline_pid;exit;;
+        [Nn] ) sleep 30;;
+        *) echo "Please answer yes or no.";;
+    esac
+done
+

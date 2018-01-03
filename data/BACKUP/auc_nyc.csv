@@ -1,0 +1,48 @@
+Algorithms,AUC Score on nyc dataset
+Running on :<built-in method now of type object at 0x7f24ee183a00>elliptic_envlope,0.425151209677
+expose,0.484122983871
+kalman,0.495547715054
+lof,0.480846774194
+skyline,0.419606854839
+tsoutlier,0.424227150538
+twitter,0.494287634409
+arima,0.441028225806
+arma,0.484375
+WindowedGaussian,0.17095094086
+Running on :2016-09-10 19:21:56.192084
+elliptic_envlope,0.424676600622
+expose,0.483789094482
+kalman,0.495496970689
+lof,0.481169150156
+skyline,0.41968233175
+tsoutlier,0.424758473882
+twitter,0.494268871786
+arima,0.939577533977
+arma,0.484525953823
+WindowedGaussian,0.179138693303
+Running on :2016-09-10 19:25:05.540606
+elliptic_envlope,0.425119617225
+expose,0.483732057416
+kalman,0.495454545455
+lof,0.480303030303
+skyline,0.419298245614
+tsoutlier,0.425677830941
+twitter,0.494417862839
+arima,0.937480063796
+arma,0.484928229665
+WindowedGaussian,0.18668261563
+Running on :2016-09-11 05:29:22.156457
+Running on :2016-09-11 05:36:30.748506
+Running on :2016-09-11 05:37:15.697438
+Running on :2016-09-11 05:53:53.873970
+Running on :2016-09-11 08:36:34.460728
+elliptic_envlope,nan
+expose,nan
+kalman,nan
+lof,nan
+skyline,nan
+tsoutlier,nan
+twitter,nan
+arima,nan
+arma,nan
+WindowedGaussian,nan

@@ -1,0 +1,23 @@
+Algorithms,AUC Score on ambient dataset
+Running on :2016-09-10 19:26:55.473634
+elliptic_envlope,nan
+expose,nan
+kalman,nan
+lof,nan
+skyline,nan
+tsoutlier,nan
+twitter,nan
+arima,nan
+arma,nan
+WindowedGaussian,nan
+Running on :2016-09-11 05:40:44.120392
+elliptic_envlope,0.46386729751
+expose,0.735341331531
+kalman,0.490199391686
+lof,0.927790920356
+skyline,0.444773008899
+tsoutlier,0.632677143179
+twitter,0.964965641546
+arima,0.759516165371
+arma,0.908474146671
+WindowedGaussian,0.565365551425

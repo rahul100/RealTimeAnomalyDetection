@@ -1,0 +1,20 @@
+echo "Running the Machine temp anomaly detection demo"
+echo "Step 1: Pumping data into influxdb"
+/usr/bin/python2.7 ../src/python/pump_MachineTemp2influx.py >> ../log/machine_temp_pump.log 2>&1 &
+pump_pid=$!
+sleep 45
+#echo $pump_pid
+echo "Windowed Gaussian anomaly detection"
+/usr/bin/python2.7 ../src/python/anomaly_windowedGaussian.py >> ../log/anomaly_wGaussian.log 2>&1 &
+gaussian_pid=$!
+echo "TS Outliers anomaly detection"
+Rscript ../src/rscript/anomaly_tsoutiers.R >> ../log/anomaly_tsoutliers.log 2>&1 &
+tsoutlier_pid=$!
+while true; do
+    read -p "Do you wish to stop the demo?" yn
+    case $yn in
+        [Yy] ) kill -9 $pump_pid;kill -9 $gaussian_pid;kill -9 $tsoutlier_pid;exit;;
+        [Nn] ) sleep 30;;
+        *) echo "Please answer yes or no.";;
+    esac
+done
